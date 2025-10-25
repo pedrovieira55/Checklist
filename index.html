@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top-bar">
+    <h1>📋 Checklist</h1>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active">☑️ Tarefas</button>
+    <button class="tab">📅 Notas</button>
+  </div>
+
+  <main>
+    <section class="tarefas">
+      <h2>Tarefa do dia</h2>
+      <p class="data">Quarta-feira, 22 de outubro De 2025</p>
+      <p class="status">2 de 3 Concluídas</p>
+
+      <div class="add-tarefa">
+        <input type="text" placeholder="Adicionar uma Tarefa">
+        <button class="add-btn">+</button>
+      </div>
+
+      <div class="lista-tarefas">
+        <div class="tarefa concluida">
+          <input type="checkbox" checked>
+          <label>Reunião com a equipe</label>
+        </div>
+
+        <div class="tarefa concluida">
+          <input type="checkbox" checked>
+          <label>Revisar documentação do projeto</label>
+        </div>
+
+        <div class="tarefa">
+          <input type="checkbox">
+          <label>Reunião com a equipe</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="calendario">
+      <div class="cal-header">
+        <button>&lt;</button>
+        <h3>Outubro 2025</h3>
+        <button>&gt;</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+          <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+          <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+          <tr><td>19</td><td>20</td><td>21</td><td class="hoje">22</td><td>23</td><td>24</td><td>25</td></tr>
+          <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+        </tbody>
+      </table>
+      <p class="msg">Clique em uma data para ver as tarefas e notas</p>
+    </section>
+  </main>
+</body>
+</html>
