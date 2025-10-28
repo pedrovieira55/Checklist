@@ -1,247 +1,290 @@
-:root {
-  --azul-escuro: #0b3a46;
-  --azul-medio: #568ea9;
-  --azul-claro: #9db7c2;
-  --preto-azulado: #011a1f;
-  --cinza-claro: #f3f4f4;
-}
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--cinza-claro);
-  min-height: 120vh; /* 🔹 Deixa a tela mais longa (pode ajustar o valor) */
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto; /* 🔹 Garante rolagem */
+    background-color: #F5F5F5;
+    color: #022026;
 }
 
-/* Cabeçalho */
+/* ======= TOPO ======= */
 .top-bar {
-  background-color: var(--azul-escuro);
-  color: white;
-  padding: 20px 40px;
-  font-size: 28px;
-  font-weight: 600;
+    background-color: #124559;
+    color: #F5F5F5;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Abas */
-.tabs {
-  display: flex;
-  background-color: var(--azul-medio);
-  padding: 10px;
-  justify-content: center;
-  gap: 15px;
+.logo {
+    height: 70px;
+    width: auto;
 }
 
-.tab {
-  flex: 0.25;
-  background-color: var(--azul-claro);
-  border: none;
-  border-radius: 12px;
-  color: var(--preto-azulado);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 10px;
-  cursor: pointer;
+.top-bar h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
-.tab.active {
-  background-color: #fff;
-  color: var(--azul-escuro);
+/* ======= BOTÕES/ABAS ======= */
+.Botoes {
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    margin: 25px auto 0 auto;
+    gap: 10px;
 }
 
-/* Conteúdo principal */
+.Botoes button {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.Botoes button.notas1 {
+     background-color: #518EA6;
+     color: #F5F5F5;
+}
+
+.Botoes button.tarefas {
+    background-color: #93B3BF;
+    color: #022026;
+}
+
+/* ======= ÁREA PRINCIPAL ======= */
 main {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
+    padding: 0;
 }
 
+/* ======= SEÇÃO DE TAREFAS ======= */
 .tarefas {
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 30px;
+    background-color: #93B3BF;
+    border-radius: 0 0 12px 12px;
+    width: 700px;
+    padding: 25px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .tarefas h2 {
-  color: var(--preto-azulado);
-  margin-bottom: 5px;
+    font-size: 1.6rem;
+    color: #022026;
+    margin-bottom: 5px;
 }
 
 .data {
-  font-size: 15px;
-  color: #444;
+    color: #022026;
+    margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 .status {
-  text-align: right;
-  font-size: 15px;
-  margin-bottom: 15px;
-  color: var(--preto-azulado);
+    text-align: right;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #022026;
+    margin-bottom: 15px;
 }
 
-/* Campo de adicionar tarefa */
+/* ======= ADICIONAR TAREFA ======= */
 .add-tarefa {
-  display: flex;
-  margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #e7eef0;
 }
 
 .add-tarefa input {
-  flex: 1;
-  background-color: var(--azul-claro);
-  border: none;
-  padding: 12px;
-  border-radius: 10px 0 0 10px;
-  font-size: 14px;
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #022026;
+}
+
+.add-tarefa input::placeholder {
+    color: #7f8c8d;
 }
 
 .add-btn {
-  background-color: var(--azul-escuro);
-  color: white;
-  border: none;
-  padding: 0 18px;
-  border-radius: 0 10px 10px 0;
-  font-size: 20px;
-  cursor: pointer;
+    background-color: #022026;
+    color: #F5F5F5;
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    margin-left: 8px;
+    cursor: pointer;
+    line-height: 44px;
 }
 
-/* Lista de tarefas */
+/* ======= LISTA DE TAREFAS ======= */
 .lista-tarefas {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .tarefa {
-  border: 1.5px solid var(--azul-escuro);
-  border-radius: 10px;
-  padding: 10px 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #9db5ba;
+    border-radius: 8px;
+    padding: 12px;
 }
 
 .tarefa input[type="checkbox"] {
-  accent-color: var(--azul-medio);
-  transform: scale(1.2);
+    display: none;
 }
 
 .tarefa label {
-  flex: 1;
-  color: var(--preto-azulado);
-  font-size: 15px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #022f33;
+    cursor: pointer;
 }
 
-.tarefa.concluida label {
-  text-decoration: line-through;
-  color: #9b9b9b;
+.tarefa label::before {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+    border: 2px solid #9db5ba;
+    border-radius: 6px;
+    margin-right: 12px;
+    transition: all 0.2s ease;
 }
 
-/* Calendário */
+.tarefa input[type="checkbox"]:checked + label::before {
+    background: #022026;
+    border-color: #022026;
+    content: '✓';
+    color: #F5F5F5;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+}
+
+.tarefa input[type="checkbox"]:checked + label {
+    color: #7f8c8d;
+    text-decoration: line-through;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+}
+
+/* ======= CALENDÁRIO ======= */
 .calendario {
-  background-color: var(--azul-claro);
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  max-width: 600px;
+    background-color: #aec6cb;
+    border-radius: 12px;
+    width: 700px;
+    padding: 20px 25px;
+    margin: 25px auto;
+    text-align: center;
+    color: #022026;
 }
 
 .cal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-}
-
-.cal-header h3 {
-  color: var(--preto-azulado);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #022026;
+    margin-bottom: 20px;
 }
 
 .cal-header button {
-  background-color: var(--azul-medio);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 4px 8px;
-  cursor: pointer;
+    background-color: #022f33;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    line-height: 35px;
+    cursor: pointer;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 5px;
+.cal-header h3 {
+    font-size: 1.5rem;
 }
 
-th, td {
-  width: 14%;
-  padding: 6px;
-  text-align: center;
-  color: var(--preto-azulado);
-  font-weight: 500;
+table#calendar {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+    text-align: center;
 }
 
-.hoje {
-  background-color: var(--azul-escuro);
-  color: white;
-  border-radius: 50%;
+table#calendar th {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: #022f33;
+}
+
+table#calendar td {
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+table#calendar td.inactive {
+    opacity: 0.4;
+    cursor: default;
+}
+
+table#calendar td.today {
+    outline: 2px solid #022f33;
+    outline-offset: -2px;
+}
+
+table#calendar td.active {
+    background: #022f33;
+    color: #F5F5F5;
+    font-weight: 700;
 }
 
 .msg {
-  font-size: 13px;
-  color: var(--preto-azulado);
-  margin-top: 8px;
-}
-
-/* 🔹 Espaço extra no final da página pra rolar */
-body::after {
-  content: "";
-  display: block;
-  height: 150px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #022f33;
+    opacity: 0.8;
+    margin-top: 15px;
 }
 
 
-/* tela de notas */
-body, html {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-}
 
-main {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px;
-  min-height: 100vh; /* Ocupa toda a tela verticalmente */
-}
 
-/* Bloco de notas */
-.tarefas textarea {
-  width: 100%;
-  min-height: 200px;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid var(--azul-medio);
-  background-color: var(--azul-claro);
-  resize: vertical;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-}
-
-/* Ajustes responsivos */
-@media (max-width: 640px) {
-  .tarefas, .calendario {
-    max-width: 90%;
-  }
-}

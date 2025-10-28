@@ -1,0 +1,164 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fontes */
+body {
+    font-family: 'Poppins', 'Inter', 'Roboto', 'Open Sans', sans-serif;
+    background-color: #F3F3F3;
+    color: #001F25;
+    line-height: 1.6;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #124559;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #001F25;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    width: auto;
+}
+
+/* Seção das abas */
+.tabs-section {
+    background-color: #93B3BF;
+    max-width: 900px;
+    margin: 10px auto 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tabs-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.tab {
+    background-color: #154957;
+    color: #F3F3F3;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: #001F25;
+}
+
+/* Container principal */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Área principal */
+main {
+    flex: 1;
+}
+
+/* Área de Notas */
+.notes-area {
+    margin-bottom: 20px;
+}
+
+.notes-area h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #001F25;
+    margin-bottom: 10px;
+}
+
+.date {
+    color: #9BB6C1;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 350px;
+    background-color: #9BB6C1;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: inherit;
+    font-size: 16px;
+    resize: vertical;
+    outline: none;
+}
+
+/* Calendário */
+.calendar {
+    background-color: #9BB6C1;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.calendar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.calendar-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #001F25;
+}
+
+.arrow {
+    background-color: #001F25;
+    color: #F3F3F3;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.weekdays span {
+    font-weight: bold;
+    color: #001F25;
+}
+
+.calendar-text {
+    text-align: center;
+    font-size: 14px;
+    color: #518CA7;
+}

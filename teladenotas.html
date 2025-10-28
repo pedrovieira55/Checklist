@@ -1,67 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checklist</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="custom.css"> <!-- CSS novo -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+    <link rel="stylesheet" href="notas.css">
 </head>
 <body>
-  <div class="top-bar">Checklist</div>
-
-  <div class="tabs">
-    <button class="tab active">Tarefas</button>
-    <button class="tab">Notas</button>
-  </div>
-
-  <main>
-    <!-- Bloco de Notas -->
-    <div class="tarefas">
-      <h2>Bloco de Notas</h2>
-      <div class="data">sexta-feira, 10 de outubro de 2025</div>
-      <textarea placeholder="Escreva sua anotação aqui..."></textarea>
+    <header class="Logo">
+    <img src="Img/Logo ofc.png" alt="Logo da Checklist" class="logo">
+  </header>
+    <div class="tabs-section">
+        <div class="tabs-container">
+            <div class="tab">Tarefas</div>
+            <div class="tab active">Notas</div>
+        </div>
     </div>
-
-    <!-- Calendário -->
-    <div class="calendario">
-      <div class="cal-header">
-        <button>&lt;</button>
-        <h3>Outubro 2025</h3>
-        <button>&gt;</button>
-      </div>
-      <table>
-        <thead>
-          <tr>
-            <th>Su</th>
-            <th>Mo</th>
-            <th>Tu</th>
-            <th>We</th>
-            <th>Th</th>
-            <th>Fr</th>
-            <th>Sa</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>28</td><td>29</td><td>30</td><td>01</td><td>02</td><td>03</td><td>04</td>
-          </tr>
-          <tr>
-            <td>05</td><td>06</td><td>07</td><td>08</td><td>09</td><td>10</td><td>11</td>
-          </tr>
-          <tr>
-            <td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td>
-          </tr>
-          <tr>
-            <td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
-          </tr>
-          <tr>
-            <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td>01</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="msg">Clique em uma data para ver as tarefas e notas</div>
+    <div class="container">
+        <main>
+            <section class="notes-area">
+                <h1>Bloco de Notas</h1>
+                <p class="date">sexta-feira, 10 de outubro de 2025</p>
+                <textarea placeholder="Escreva sua anotação aqui..."></textarea>
+            </section>
+            <section class="calendar">
+                <div class="calendar-header">
+                    <button class="arrow">&lt;</button>
+                    <h2>Outubro 2025</h2>
+                    <button class="arrow">&gt;</button>
+                </div>
+                <div class="weekdays">
+                    <span>Dom</span>
+                    <span>Seg</span>
+                    <span>Ter</span>
+                    <span>Qua</span>
+                    <span>Qui</span>
+                    <span>Sex</span>
+                    <span>Sáb</span>
+                </div>
+                <p class="calendar-text">Clique em uma data para ver as tarefas e notas.</p>
+            </section>
+        </main>
     </div>
-  </main>
 </body>
 </html>
