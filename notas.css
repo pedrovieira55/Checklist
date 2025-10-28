@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Fontes */
+/* Fontes e corpo */
 body {
     font-family: 'Poppins', 'Inter', 'Roboto', 'Open Sans', sans-serif;
     background-color: #F3F3F3;
@@ -33,37 +33,45 @@ header {
     width: auto;
 }
 
-/* Seção das abas */
+/* Seção das abas — IGUAL à tela de tarefas */
 .tabs-section {
     background-color: #93B3BF;
     max-width: 900px;
     margin: 10px auto 0 auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tabs-container {
     display: flex;
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
 }
 
+/* Aba inativa */
 .tab {
-    background-color: #154957;
-    color: #F3F3F3;
-    padding: 10px 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    text-align: center;
+    background-color: #7EA2AF;
+    color: #001F25;
+    font-weight: 600;
+    padding: 10px 0;
+    border-radius: 10px 10px 0 0;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
 }
 
+/* Aba ativa (funde com o container) */
 .tab.active {
-    background-color: #001F25;
+    background-color: #93B3BF;
+    color: #001F25;
+    cursor: default;
+    box-shadow: none;
+}
+
+/* Hover apenas nas abas inativas */
+.tab:not(.active):hover {
+    background-color: #6F97A3;
+    color: #fff;
 }
 
 /* Container principal */

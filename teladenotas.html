@@ -8,14 +8,17 @@
 </head>
 <body>
     <header class="Logo">
-    <img src="Img/Logo ofc.png" alt="Logo da Checklist" class="logo">
-  </header>
+        <img src="Img/Logo ofc.png" alt="Logo da Checklist" class="logo">
+    </header>
+
+
     <div class="tabs-section">
         <div class="tabs-container">
-            <div class="tab">Tarefas</div>
+            <a href="tarefas.html" class="tab">Tarefas</a>
             <div class="tab active">Notas</div>
         </div>
     </div>
+
     <div class="container">
         <main>
             <section class="notes-area">
@@ -23,12 +26,14 @@
                 <p class="date">sexta-feira, 10 de outubro de 2025</p>
                 <textarea placeholder="Escreva sua anotação aqui..."></textarea>
             </section>
+
             <section class="calendar">
                 <div class="calendar-header">
                     <button class="arrow">&lt;</button>
                     <h2>Outubro 2025</h2>
                     <button class="arrow">&gt;</button>
                 </div>
+
                 <div class="weekdays">
                     <span>Dom</span>
                     <span>Seg</span>
@@ -38,9 +43,12 @@
                     <span>Sex</span>
                     <span>Sáb</span>
                 </div>
+
                 <p class="calendar-text">Clique em uma data para ver as tarefas e notas.</p>
             </section>
         </main>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

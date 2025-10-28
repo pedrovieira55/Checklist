@@ -287,4 +287,43 @@ table#calendar td.active {
 
 
 
+/* 1. Efeito de Riscado na Tarefa Concluída */
+
+.tarefa.concluida label {
+    text-decoration: line-through; 
+    color: #888; 
+}
+
+/* 2. Visibilidade da Seção do Calendário (Ajuste Básico) */
+
+.calendario {
+    /* Garante que o calendário apareça quando 'display: block' for ativado */
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* 3. Estilização da Mensagem de Sucesso */
+.success-message {
+    position: fixed; /* Fixa na tela */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    background-color: #4CAF50; 
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+    opacity: 0; 
+    pointer-events: none; /* Não bloqueia cliques quando invisível */
+    transition: opacity 0.5s ease-in-out; /* Transição suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.notas-link {
+  text-decoration: none;
+}
+
+
+
+
 

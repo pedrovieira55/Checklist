@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,12 +14,16 @@
   </header>
 
   <div class="Botoes">
-    <button class="tarefas">
-      <i class="fas fa-check-square">
-      </i> Tarefas</button>
-    <button class="notas1">
-      <i class="fas fa-calendar-days">
-      </i> Notas</button>
+    <button class="tarefas active">
+      <i class="fas fa-check-square"></i> Tarefas
+    </button>
+
+    <!-- botão que leva à página de notas -->
+    <a href="teladenotas.html" class="notas-link">
+      <button class="notas1">
+        <i class="fas fa-calendar-days"></i> Notas
+      </button>
+    </a>
   </div>
 
   <main>
@@ -34,8 +37,7 @@
         <button class="add-btn">+</button>
       </div>
 
-      <div class="lista-tarefas">
-      </div>
+      <div class="lista-tarefas"></div>
     </section>
 
     <section class="calendario">
@@ -61,9 +63,8 @@
 
       <p class="msg">Clique em uma data para ver as tarefas e notas</p>
     </section>
-
   </main>
+
   <script src="script.js"></script>
 </body>
-
 </html>
